@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>TCL Tebus Murah Harga Spesial</title>
+
+  <link
+    rel="icon"
+    href="https://aws-obg-image-lb-2.tcl.com/content/dam/brandsite/it-resources/common/navigation/tcl-logo.svg"
+    type="image/svg+xml"
+  />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+      background: #f7f8fa;
+    }
+
+    /*
+      Keep the iframe exactly within the visible mobile viewport.
+      Do not add extra height: the Apps Script app uses 100dvh/fixed modals
+      internally, so an oversized iframe can push modal controls off-screen.
+    */
+    .iframe-container {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh; /* fallback */
+      min-height: 0;
+      overflow: hidden;
+      background: #f7f8fa;
+    }
+
+    @supports (height: 100svh) {
+      .iframe-container {
+        height: 100svh;
+      }
+    }
+
+    iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      border: 0;
+      background: #f7f8fa;
+    }
+
+    .loader {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: #666;
+      font-size: 1rem;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="iframe-container">
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      Loading app...
+    </div>
+
+    <iframe
+      src="https://script.google.com/a/macros/tclindonesia.com/s/AKfycbyLioOtORb0GDMsjNDdTZ4R6k6p1x813Nnf5kkN1eNf_Ilg-8b_UiimcuWd7pVXZm5k/exec"
+      title="TCL Tebus Murah Harga Spesial"
+      loading="eager"
+      allowfullscreen
+      onload="document.getElementById('loader').style.display='none';"
+    ></iframe>
+  </main>
+</body>
+</html>
